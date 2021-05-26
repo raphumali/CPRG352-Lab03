@@ -21,6 +21,20 @@ public class AgeCalculatorServlet extends HttpServlet {
             throws ServletException, IOException {
           //getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request, response);
 
+          String age = request.getParameter("user_age");
+          
+          if(age == null || age.equals("") || age.equals(" ") || Character.isLetter(age.charAt(0))){
+           //Message to help the user
+            request.setAttribute("message", "Invalid Entry, Please enter your current age as a digit.");
+            //forward the request and response objects to the JSP
+            getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request,response);
+                      //Very important. Stops the code call
+
+        }else{
+          int number = Integer.parseInt(age) +  1;
+          request.setAttribute("answer", "Your age next birthday is " + number );
+          getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request,response);
+          }
         }
   
         

@@ -15,10 +15,10 @@
         <h1>Age Calculator</h1>
         <form method = "post" action = "age">
             <label>Enter Your Current Age: </label>
-            <input type="text" name="first_name"  placeholder="21">
-            <br>
+            <input type="text" name="user_age"  placeholder="21">
+             <p>${message}</p>
             <input type="submit" value="Age Next Year">
-            <br>
+             <p>${answer}</p>
             <a href="arithmetic">Arithmetic Calculator</a>
                    
         </form>
