@@ -28,7 +28,7 @@ public class AgeCalculatorServlet extends HttpServlet {
             request.setAttribute("message", "Invalid Entry, Please enter your current age as a digit.");
             //forward the request and response objects to the JSP
             getServletContext().getRequestDispatcher("/WEB-INF/ageCalculator.jsp").forward(request,response);
-                      //Very important. Stops the code call
+                      
 
         }else{
           int number = Integer.parseInt(age) +  1;
