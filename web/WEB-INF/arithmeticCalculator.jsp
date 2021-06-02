@@ -15,16 +15,16 @@
          <h1>Arithmetic Calculator</h1>
         <form method = "post" action = "arithmetic">
             <label>First: </label>
-            <input type="text" name="first_number"  placeholder="1" value="${numberOne}">
+            <input type="text" name="first_number"  placeholder="1" value="${firstNumber}">
             <br>
             <label>Second: </label>
-            <input type="text" name="second_number"  placeholder="2" value="${numberTwo}">
-            <p>${message}</p>
+            <input type="text" name="second_number"  placeholder="2" value="${secondNumber}">
+            <br>
             <input type="submit" value="+" name="pressed">
             <input type="submit" value="-" name="pressed">
             <input type="submit" value="*" name="pressed">
-            <input type="submit" value="/" name="pressed">
-            <p>Result: ${answer}</p>
+            <input type="submit" value="%" name="pressed">
+            <p>Result: ${placeholder}${answer}${message}</p>
             <a href="age">Age Calculator</a>
                    
         </form>

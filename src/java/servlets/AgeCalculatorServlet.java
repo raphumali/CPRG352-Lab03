@@ -23,6 +23,9 @@ public class AgeCalculatorServlet extends HttpServlet {
 
           String age = request.getParameter("user_age");
           
+          request.setAttribute("age", age);
+           
+          
           if(age == null || age.equals("") || age.equals(" ") || Character.isLetter(age.charAt(0))){
            //Message to help the user
             request.setAttribute("message", "Invalid Entry, Please enter your current age as a digit.");
